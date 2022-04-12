@@ -1,0 +1,1 @@
+Project with code for QAA_Java lectures
