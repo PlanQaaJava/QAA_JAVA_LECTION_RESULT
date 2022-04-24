@@ -1,55 +1,71 @@
 import human.Dev;
-import human.Develop;
 import human.Employee;
 import human.Product;
 import human.Qa;
-import human.Sell;
-import package_1.Child;
-import package_1.Parent;
+import human.Testing;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Application {
 
     public static void main(String[] args) {
 
-        Employee emp1 = new Qa("Dimka", "QA");
-        Dev emp2 = new Dev("Igor", "Dev");
+        Product product = new Product("Igor", "PM");
+//        product.working();
+//        product.selling();
+//
+        Qa qa = new Qa("Petr", "QA");
+//        qa.development();
+//        qa.testing();
+//
+//        Dev dev = new Dev("Sebastian", "Java");
+//        dev.development();
 
-        emp1.working();
-//        System.out.println(emp1.getName());
-        emp1.setAge(28);
-//        System.out.println(emp1.getAge());
+        Employee employee = new Qa("Grisha", "SDET");
+        Employee employee2 = new Dev("Anton", "C#");
+        Employee employee3 = new Product("Masha", "PM");
 
-        emp2.development();
+//        employee.working();
+//        employee2.working();
+//        employee3.working();
 
-        Sell sell = new Product("Ignat", "Product");
-        sell.selling();
+        Testing testing = new Qa("name", "posit");
+//        testing.testing();
 
-        int[] array = new int[]{1,2,3,4,5};
-        Employee[] employees = new Employee[]{emp1, emp2, new Product("Petr", "Product")};
-
-//        for(int element:array){
-//            System.out.println(element);
+//        if (product instanceof Testing) {
+//            System.out.println("true");
+//        } else {
+//            System.out.println("false");
 //        }
 
-//        List<Employee> list = new ArrayList<>();
-//        list.add(emp1);
-//        System.out.println(list);
-//        System.out.println(list.isEmpty());
-//        System.out.println(list.get(0));
-//        list.remove(emp1);
-//        System.out.println(list);
-//        System.out.println(list.isEmpty());
+        int[] array = new int[]{1,2,3,4,5,6};
 
-        System.out.println(emp2 instanceof Sell);
+        System.out.println(array);
 
-//        someMethod(emp1);
-        someMethod(emp2);
+//        for (int i = 0; i < array.length; i++){
+//            System.out.println(array[i]);
+//        }
+
+        Qa[] qaArray = new Qa[]{new Qa("new", "qa"), qa};
+
+        ArrayList<String> arrayList = new ArrayList<>();
+
+        arrayList.add("String");
+        arrayList.add("String2");
+        arrayList.add("String3");
+
+//        System.out.println(arrayList.get(1));
+
+        ArrayList<Employee> employees = new ArrayList<>();
+        employees.add(product);
+        employees.add(qa);
+        employees.add(employee2);
+        employees.add(employee);
+
+        someMethod(qa);
     }
 
-    static void someMethod(Develop develop){
-        develop.development();
+    public static void someMethod(Testing testing){
+        testing.testing();
     }
 }

@@ -44,9 +44,7 @@ public abstract class Employee {
         this.position = position;
     }
 
-    public void working(){
-        System.out.println("Employee is working");
-    }
+    public abstract void working();
 
     @Override
     public String toString() {
