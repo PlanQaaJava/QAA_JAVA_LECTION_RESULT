@@ -38,7 +38,7 @@ public class Application {
 //            System.out.println("false");
 //        }
 
-        int[] array = new int[]{1,2,3,4,5,6};
+        int[] array = new int[]{1, 2, 3, 4, 5, 6};
 
         System.out.println(array);
 
@@ -65,7 +65,7 @@ public class Application {
         someMethod(qa);
     }
 
-    public static void someMethod(Testing testing){
+    public static void someMethod(Testing testing) {
         testing.testing();
     }
 }
