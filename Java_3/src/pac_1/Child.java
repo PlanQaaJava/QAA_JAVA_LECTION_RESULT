@@ -56,7 +56,7 @@ public class Child extends Parent {
             } else {
                 throw new MyException("Is not OK");
             }
-        } catch (MyException ex){
+        } catch (MyException ex) {
             ex.printStackTrace();
         }
     }
