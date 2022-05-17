@@ -6,3 +6,6 @@
 /Allure/.allure/
 /GradleTestNGAllure/.gradle/
 /GradleTestNGAllure/build/
+/Selenium/target/
+/Selenium/.allure/
+/Selenium/chromedriver/
