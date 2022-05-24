@@ -9,3 +9,5 @@
 /Selenium/target/
 /Selenium/.allure/
 /Selenium/chromedriver/
+/RestAssured/.gradle/
+/RestAssured/build/

@@ -1,0 +1,53 @@
+plugins {
+    id "io.qameta.allure" version "2.9.6"
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+allure {
+    version.set("2.17.3")
+}
+
+dependencies {
+    // JUnit аннотации
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+
+    //RestAssure аннотации
+    implementation 'io.rest-assured:rest-assured:5.0.1'
+    implementation "io.rest-assured:rest-assured-all:5.0.1"
+
+    //Allure аннотации
+    implementation'io.qameta.allure:allure-rest-assured:2.17.3'
+    testImplementation 'io.qameta.allure:allure-junit5:2.17.3'
+
+    //AssertJ аннотации
+    testImplementation 'org.assertj:assertj-core:3.22.0'
+
+    //Lombok аннотации
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    //Faker аннотации
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+
+    //Owner аннотации
+    implementation 'org.aeonbits.owner:owner:1.0.12'
+
+    //Jackson аннотации
+    implementation'org.openapitools:jackson-databind-nullable:0.2.1'
+}
+
+test {
+    useJUnitPlatform()
+}
