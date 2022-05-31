@@ -11,3 +11,5 @@
 /Selenium/chromedriver/
 /RestAssured/.gradle/
 /RestAssured/build/
+/Cucumber/target/
+/Cucumber/.allure/
