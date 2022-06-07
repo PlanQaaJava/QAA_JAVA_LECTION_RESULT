@@ -13,3 +13,6 @@
 /RestAssured/build/
 /Cucumber/target/
 /Cucumber/.allure/
+/JDBC/.gradle/
+/JDBC/build/
+/JDBC/allure-results/
