@@ -16,3 +16,4 @@
 /JDBC/.gradle/
 /JDBC/build/
 /JDBC/allure-results/
+/production/
