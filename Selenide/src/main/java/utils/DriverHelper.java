@@ -19,11 +19,15 @@ public class DriverHelper {
     @SneakyThrows
     public static String getBrowserName(String browser) {
 
-        return switch (browser) {
-            case ("chrome") -> "chrome";
-            case ("firefox") -> "firefox";
-            case ("edge") -> "edge";
-            default -> throw new NotFoundBrowserName("Browser name is wrong");
-        };
+        switch (browser) {
+            case ("chrome"):
+                return "chrome";
+            case ("firefox"):
+                return "firefox";
+            case ("edge"):
+                return "edge";
+            default:
+                throw new NotFoundBrowserName("Browser name is wrong");
+        }
     }
 }
