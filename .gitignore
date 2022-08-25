@@ -18,3 +18,6 @@
 /JDBC/allure-results/
 /production/
 /logs/
+/Selenide/target/
+/Selenide/.allure/
+/Selenide/build/
