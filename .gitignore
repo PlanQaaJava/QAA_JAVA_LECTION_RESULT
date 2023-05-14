@@ -22,3 +22,9 @@
 /Selenide/.allure/
 /Selenide/build/
 /Appium/target/
+/Proto/Client/.gradle/
+/Proto/Client/.idea/
+/Proto/Client/build/
+/Proto/Server/.gradle/
+/Proto/Server/.idea/
+/Proto/Server/build/
