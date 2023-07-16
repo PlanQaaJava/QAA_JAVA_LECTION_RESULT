@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info: "Yaml file for exam"
+version: 1.0.0
+paths:
+  "/user":
+    post:
+      description: "Post method for exam"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  required: true
+      responses:
+        201:
+          description: CREATED
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    format: uuid
+                  name:
+                    type: string
+                    required: true

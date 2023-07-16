@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+    id 'org.openapi.generator' version '6.6.0'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main.java.srcDirs += "build/generated/sources/swagger/src/main/java"
+}
+
+configurations {
+    openApi
+}
+
+apply plugin: "org.openapi.generator"
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+compileJava.dependsOn tasks.named("openApiGenerate")
+
+openApiGenerate {
+    logging.captureStandardOutput(LogLevel.INFO)
+    inputSpec.set("$rootDir/src/main/resources/user.yaml")
+    outputDir.set("$buildDir/generated/sources/swagger")
+    generateApiTests.set(false)
+    skipValidateSpec.set(true)
+    generatorName.set("java")
+    apiPackage.set("package.api")
+    invokerPackage.set("package.invoker")
+    modelPackage.set("package.model")
+    library.set("rest-assured")
+    generateModelDocumentation.set(false)
+    generateApiDocumentation.set(false)
+    configOptions.set(["serializationLibrary": "jackson", "dateLibrary": "java8", "openApiNullable": "false"])
+}

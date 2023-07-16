@@ -28,3 +28,5 @@
 /Proto/Server/.gradle/
 /Proto/Server/.idea/
 /Proto/Server/build/
+/openapi/build/
+/openapi/.gradle/
